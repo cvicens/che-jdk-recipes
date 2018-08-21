@@ -30,7 +30,7 @@ RUN sudo yum install -y epel-release && \
 
 # Install nodejs for ls agents and OpenShift CLI
 RUN sudo yum update -y && \
-    curl -sL https://rpm.nodesource.com/setup_6.x | sudo -E bash - && \
+    curl -sL https://rpm.nodesource.com/setup_8.x | sudo -E bash - && \
     sudo yum install -y bzip2 tar curl wget nodejs && \
     sudo wget -qO- "https://mirror.openshift.com/pub/openshift-v3/clients/${OC_VERSION}/linux/oc.tar.gz" | sudo tar xvz -C /usr/local/bin && \
     sudo yum remove -y wget && \

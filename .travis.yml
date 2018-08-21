@@ -1,6 +1,6 @@
 env:
   global:
-  - REPO=siamaksade/che-centos-jdk8
+  - REPO=cvicens/che-centos-jdk8-node8
 
 sudo: required
 language: python
@@ -19,3 +19,4 @@ after_success:
   - export TAG=`if [ "$TRAVIS_BRANCH" == "master" ]; then echo "latest"; else echo $TRAVIS_BRANCH ; fi`
   - docker tag $REPO:dev $REPO:$TAG
   - docker push $REPO:$TAG
+  
